@@ -31,12 +31,13 @@ jobs:
           RESEND_FROM: ${{ secrets.RESEND_FROM }}
           RESEND_TO: ${{ secrets.RESEND_TO }}
           WECHAT_WEBHOOK_URL: ${{ secrets.WECHAT_WEBHOOK_URL }}
+          DATABASE_URL: "file:./prisma/dev.db"
         run: python crawler/main.py
 
       - name: Commit updated database
         run: |
           git config user.name "ai-radar-bot"
           git config user.email "bot@ai-radar.dev"
-          git add prisma/dev.db
+          git add --force prisma/dev.db prisma/dev.db-journal
           git diff --staged --quiet || git commit -m "chore: update daily AI radar data"
           git push
