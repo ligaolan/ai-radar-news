@@ -17,6 +17,40 @@ CATEGORY_ICON = {
 }
 
 
+import html as html_mod
+
+def html_escape(text: str) -> str:
+    """转义 HTML 特殊字符，防止注入和显示异常"""
+    if not text:
+        return ""
+    return html_mod.escape(text)
+
+
+def clean_digest(text: str) -> str:
+    """清理 AI 摘要中的 markdown 标记，转为纯文本"""
+    import re
+    if not text:
+        return ""
+    # 去掉 **bold** 标记
+    text = re.sub(r"\*\*(.+?)\*\*", r"\1", text)
+    # 去掉多余的换行
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text
+
+
+def truncate_text(text: str, max_len: int = 500) -> str:
+    """智能截断文本，中文友好"""
+    if not text or len(text) <= max_len:
+        return text or ""
+    # 尽量在句号或换行处截断
+    cutoff = text.rfind("。", 0, max_len)
+    if cutoff < max_len * 0.6:
+        cutoff = text.rfind("\n", 0, max_len)
+    if cutoff < max_len * 0.6:
+        cutoff = max_len
+    return text[:cutoff] + "……"
+
+
 def build_email_html(articles: list[dict]) -> str:
     """构建邮件 HTML"""
     by_category: dict[str, list[dict]] = {}
@@ -31,23 +65,46 @@ def build_email_html(articles: list[dict]) -> str:
         icon = CATEGORY_ICON.get(cat, "📌")
         sections += f'<h2 style="color:#6c8cff;margin-top:24px;">{icon} {cat.upper()} ({len(items)})</h2>\n'
         for a in items:
+            title = html_escape(a.get("title", ""))
+            url = html_escape(a.get("url", ""))
+            source = html_escape(a.get("source_name", ""))
+            date = (a.get("published_at", "") or "")[:10]
+
+            # 原文摘要
+            raw_summary = a.get("summary", "")
+            if raw_summary:
+                summary_text = truncate_text(raw_summary, 500)
+                summary_html = f"""
+              <div style="margin-top:6px;padding:8px 12px;background:#141720;border-radius:4px;">
+                <p style="margin:0;font-size:12px;color:#5a5e78;">📝 原文</p>
+                <p style="margin:2px 0 0;font-size:14px;color:#a0a4b8;">{html_escape(summary_text)}</p>
+              </div>"""
+            else:
+                summary_html = ""
+
+            # AI 摘要
             digest_html = ""
             if a.get("ai_digest"):
+                digest_text = clean_digest(a["ai_digest"])
                 digest_html = f"""
-                <div style="margin-top:8px;padding:12px;background:#1a1d2e;border-left:3px solid #6c8cff;border-radius:4px;">
-                  <p style="margin:0;font-size:13px;color:#a0a4b8;">🤖 AI PM 视角</p>
-                  <p style="margin:4px 0 0;font-size:14px;color:#e4e6f0;">{a['ai_digest']}</p>
-                </div>"""
+              <div style="margin-top:8px;padding:12px;background:#1a1d2e;border-left:3px solid #6c8cff;border-radius:4px;">
+                <p style="margin:0;font-size:13px;color:#6c8cff;">🤖 AI PM 视角解读</p>
+                <p style="margin:4px 0 0;font-size:14px;color:#e4e6f0;line-height:1.6;">{html_escape(digest_text)}</p>
+              </div>"""
+
+            # 两者都没有时显示占位
+            if not raw_summary and not a.get("ai_digest"):
+                summary_html = """
+              <p style="margin-top:6px;font-size:13px;color:#4a4d5e;">暂无摘要，点击标题查看原文 →</p>"""
+
             sections += f"""
             <div style="margin-bottom:16px;padding:16px;background:#1a1d2e;border-radius:8px;">
-              <a href="{a['url']}" style="font-size:16px;color:#e4e6f0;text-decoration:none;font-weight:600;">
-                {a['title']}
+              <a href="{url}" style="font-size:16px;color:#e4e6f0;text-decoration:none;font-weight:600;" target="_blank">
+                {title}
               </a>
-              <p style="margin:4px 0;font-size:12px;color:#8b8fa8;">
-                {a['source_name']} · {a.get('published_at', '')[:10]}
-              </p>
-              <p style="margin:8px 0 0;font-size:14px;color:#a0a4b8;">{a.get('summary', '')[:300]}</p>
-              {digest_html}
+              <p style="margin:4px 0 0;font-size:12px;color:#8b8fa8;">
+                {source} · {date}
+              </p>{summary_html}{digest_html}
             </div>"""
 
     return f"""<!DOCTYPE html>
@@ -62,7 +119,7 @@ def build_email_html(articles: list[dict]) -> str:
     {sections}
     <hr style="border-color:#2a2d3e;margin:24px 0;">
     <p style="color:#4a4d5e;font-size:12px;text-align:center;">
-      AI Radar · 每日自动生成 · <a href="https://github.com" style="color:#6c8cff;">GitHub</a>
+      AI Radar · 每日自动生成 · <a href="https://github.com/ligaolan/ai-radar-news" style="color:#6c8cff;">GitHub</a>
     </p>
   </div>
 </body>
