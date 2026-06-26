@@ -1,0 +1,31 @@
+{
+  "name": "ai-radar",
+  "version": "1.0.0",
+  "description": "AI 行业每日动态抓取与智能摘要，AI PM 视角解读",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push"
+  },
+  "keywords": ["ai", "radar", "news"],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@prisma/client": "^5.22.0",
+    "next": "^16.2.9",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.3.1",
+    "@types/node": "^26.0.1",
+    "@types/react": "^19.2.17",
+    "postcss": "^8.5.15",
+    "prisma": "^5.22.0",
+    "tailwindcss": "^4.3.1",
+    "typescript": "^6.0.3"
+  }
+}

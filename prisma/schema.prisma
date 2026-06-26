@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Article {
+  id          String   @id @default(cuid())
+  title       String
+  url         String   @unique
+  summary     String            // 原文摘要/简介
+  aiDigest    String?           // AI 生成的 AI PM 视角解读
+  source      String            // 来源标识 (hackernews, arxiv, jiqizhixin...)
+  sourceName  String            // 来源显示名 (Hacker News, ArXiv, 机器之心...)
+  category    String   @default("news") // paper / product / news / oss
+  publishedAt DateTime
+  fetchedAt   DateTime @default(now())
+  pushed      Boolean  @default(false)
+  createdAt   DateTime @default(now())
+}
