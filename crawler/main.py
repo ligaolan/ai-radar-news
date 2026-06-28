@@ -257,10 +257,9 @@ async def main(summarize: bool = True, push: bool = True, dry_run: bool = False)
     # ── Step 5: 推送 ──
     if push:
         print("\n📨 Step 4: 推送...")
-        # 按分类交错排列，避免全部是同一类型
-        ranked = rank_articles_for_push(unique)
-        await send_email(ranked[:40])
-        await send_wechat(ranked[:15])
+        # unique 已在 Step 3 按分类交错排列，直接取前 40/15 条推送
+        await send_email(unique[:40])
+        await send_wechat(unique[:15])
     else:
         print("\n⏭️  跳过推送 (--no-push)")
 

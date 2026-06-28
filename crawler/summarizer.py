@@ -49,7 +49,7 @@ def summarize_article(title: str, summary: str, source_name: str) -> str | None:
                 {"role": "system", "content": SYSTEM_PROMPT},
                 {"role": "user", "content": user_prompt},
             ],
-            max_tokens=300,
+            max_tokens=800,
             temperature=0.7,
         )
         return resp.choices[0].message.content
@@ -58,17 +58,22 @@ def summarize_article(title: str, summary: str, source_name: str) -> str | None:
         return None
 
 
-def summarize_batch(articles: list[dict], max_count: int = 30) -> list[dict]:
-    """批量为文章生成 AI 摘要，最多处理 max_count 条（控制成本）"""
+def summarize_batch(articles: list[dict], max_count: int = 50) -> list[dict]:
+    """批量为文章生成 AI 摘要，优先处理摘要较短的文章（如 Product Hunt 等短文案源）"""
     if not DEEPSEEK_API_KEY:
         print("[AI摘要] 未配置 DEEPSEEK_API_KEY，跳过所有摘要")
         return articles
 
-    # 优先为新文章生成摘要（没有 ai_digest 的）
+    # 筛选需要摘要的文章
     need_summary = [a for a in articles if not a.get("ai_digest")]
+
+    # 优先给摘要短的文章生成 AI 解读（摘要越短越需要 AI 补充）
+    need_summary.sort(key=lambda a: len(a.get("summary", "")))
+
     to_process = need_summary[:max_count]
 
-    print(f"[AI摘要] 为 {len(to_process)}/{len(need_summary)} 篇文章生成摘要...")
+    short_count = sum(1 for a in to_process if len(a.get("summary", "")) < 100)
+    print(f"[AI摘要] 为 {len(to_process)}/{len(need_summary)} 篇文章生成摘要（其中 {short_count} 条原文摘要<100字，优先处理）...")
 
     for i, article in enumerate(to_process):
         digest = summarize_article(
