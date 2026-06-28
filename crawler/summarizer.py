@@ -29,10 +29,13 @@ SYSTEM_PROMPT = """你是一位资深的 AI 产品经理，帮助另一位 AI PM
 
 
 def summarize_article(title: str, summary: str, source_name: str) -> str | None:
-    """为单篇文章生成 AI PM 视角摘要，失败返回 None"""
+    """为单篇文章生成 AI PM 视角摘要，失败返回 None。失败时自动重试 3 次"""
     if not DEEPSEEK_API_KEY:
         print("  [SKIP] 未配置 DEEPSEEK_API_KEY，跳过 AI 摘要")
         return None
+
+    import time
+    import traceback
 
     client = get_client()
 
@@ -42,20 +45,26 @@ def summarize_article(title: str, summary: str, source_name: str) -> str | None:
 
 请生成 AI PM 视角的中文解读（100-150字）："""
 
-    try:
-        resp = client.chat.completions.create(
-            model="deepseek-chat",
-            messages=[
-                {"role": "system", "content": SYSTEM_PROMPT},
-                {"role": "user", "content": user_prompt},
-            ],
-            max_tokens=800,
-            temperature=0.7,
-        )
-        return resp.choices[0].message.content
-    except Exception as e:
-        print(f"  [WARN] AI 摘要生成失败: {e}")
-        return None
+    for attempt in range(3):
+        try:
+            resp = client.chat.completions.create(
+                model="deepseek-chat",
+                messages=[
+                    {"role": "system", "content": SYSTEM_PROMPT},
+                    {"role": "user", "content": user_prompt},
+                ],
+                max_tokens=800,
+                temperature=0.7,
+                timeout=30,
+            )
+            return resp.choices[0].message.content
+        except Exception as e:
+            err_msg = str(e)[:100]
+            if attempt < 2:
+                wait = (attempt + 1) * 2
+                time.sleep(wait)
+            else:
+                print(f"  [WARN] AI 摘要失败(重试3次): {err_msg}")
 
 
 def summarize_batch(articles: list[dict], max_count: int = 50) -> list[dict]:
