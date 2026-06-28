@@ -1,16 +1,22 @@
 """AI 摘要生成器 — 调用 DeepSeek API 生成 AI PM 视角的中文解读"""
 
 import os
+import httpx
 from openai import OpenAI
 
 
 # DeepSeek API 兼容 OpenAI SDK，只需改 base_url 和 api_key
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
+DEEPSEEK_PROXY = os.getenv("DEEPSEEK_PROXY", "")  # 代理地址，如 http://127.0.0.1:7890
 
 
 def get_client() -> OpenAI:
-    return OpenAI(api_key=DEEPSEEK_API_KEY, base_url=DEEPSEEK_BASE_URL)
+    kwargs = {"api_key": DEEPSEEK_API_KEY, "base_url": DEEPSEEK_BASE_URL}
+    if DEEPSEEK_PROXY:
+        http_client = httpx.Client(proxy=DEEPSEEK_PROXY, timeout=30)
+        kwargs["http_client"] = http_client
+    return OpenAI(**kwargs)
 
 
 SYSTEM_PROMPT = """你是一位资深的 AI 产品经理，帮助另一位 AI PM 实习生快速了解行业动态。
