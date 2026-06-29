@@ -65,12 +65,15 @@ def summarize_article(title: str, summary: str, source_name: str) -> str | None:
             )
             return resp.choices[0].message.content
         except Exception as e:
-            err_msg = str(e)[:100]
+            err_type = type(e).__name__
+            err_msg = str(e)[:200]
+            if attempt == 0:
+                traceback.print_exc()
             if attempt < 2:
                 wait = (attempt + 1) * 2
                 time.sleep(wait)
             else:
-                print(f"  [WARN] AI 摘要失败(重试3次): {err_msg}")
+                print(f"  [WARN] AI 摘要失败(重试3次) [{err_type}]: {err_msg}")
 
 
 def summarize_batch(articles: list[dict], max_count: int = 50) -> list[dict]:
