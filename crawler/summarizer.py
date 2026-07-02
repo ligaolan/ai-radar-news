@@ -1,23 +1,14 @@
 """AI 摘要生成器 — 调用 DeepSeek API 生成 AI PM 视角的中文解读"""
 
 import os
+import time
+import json
 import httpx
-from openai import OpenAI
 
-
-# DeepSeek API 兼容 OpenAI SDK，只需改 base_url 和 api_key
+# DeepSeek API 配置
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com")
-DEEPSEEK_PROXY = os.getenv("DEEPSEEK_PROXY", "")  # 代理地址，如 http://127.0.0.1:7890
-
-
-def get_client() -> OpenAI:
-    kwargs = {"api_key": DEEPSEEK_API_KEY, "base_url": DEEPSEEK_BASE_URL}
-    if DEEPSEEK_PROXY:
-        http_client = httpx.Client(proxy=DEEPSEEK_PROXY, timeout=30)
-        kwargs["http_client"] = http_client
-    return OpenAI(**kwargs)
-
+DEEPSEEK_PROXY = os.getenv("DEEPSEEK_PROXY", "")
 
 SYSTEM_PROMPT = """你是一位资深的 AI 产品经理，帮助另一位 AI PM 实习生快速了解行业动态。
 
@@ -35,59 +26,62 @@ SYSTEM_PROMPT = """你是一位资深的 AI 产品经理，帮助另一位 AI PM
 
 
 def summarize_article(title: str, summary: str, source_name: str) -> str | None:
-    """为单篇文章生成 AI PM 视角摘要，失败返回 None。失败时自动重试 3 次"""
+    """为单篇文章生成 AI PM 视角摘要。使用 httpx 直调 DeepSeek API（不依赖 OpenAI SDK）"""
     if not DEEPSEEK_API_KEY:
         print("  [SKIP] 未配置 DEEPSEEK_API_KEY，跳过 AI 摘要")
         return None
 
-    import time
-    import traceback
+    payload = {
+        "model": "deepseek-chat",
+        "messages": [
+            {"role": "system", "content": SYSTEM_PROMPT},
+            {"role": "user", "content": f"来源：{source_name}\n标题：{title}\n原文摘要：{summary[:800]}\n\n请生成 AI PM 视角的中文解读（100-150字）："},
+        ],
+        "max_tokens": 800,
+        "temperature": 0.7,
+    }
 
-    client = get_client()
+    client_kwargs = {"timeout": 30}
+    if DEEPSEEK_PROXY:
+        client_kwargs["proxy"] = DEEPSEEK_PROXY
 
-    user_prompt = f"""来源：{source_name}
-标题：{title}
-原文摘要：{summary[:800]}
-
-请生成 AI PM 视角的中文解读（100-150字）："""
+    url = f"{DEEPSEEK_BASE_URL}/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+        "Content-Type": "application/json",
+    }
 
     for attempt in range(3):
         try:
-            resp = client.chat.completions.create(
-                model="deepseek-chat",
-                messages=[
-                    {"role": "system", "content": SYSTEM_PROMPT},
-                    {"role": "user", "content": user_prompt},
-                ],
-                max_tokens=800,
-                temperature=0.7,
-                timeout=30,
-            )
-            return resp.choices[0].message.content
+            with httpx.Client(**client_kwargs) as client:
+                resp = client.post(url, headers=headers, json=payload)
+                resp.raise_for_status()
+                data = resp.json()
+                content = data["choices"][0]["message"]["content"]
+                return content.strip() if content else None
+
         except Exception as e:
             err_type = type(e).__name__
             err_msg = str(e)[:200]
             if attempt == 0:
+                import traceback
                 traceback.print_exc()
             if attempt < 2:
-                wait = (attempt + 1) * 2
-                time.sleep(wait)
+                time.sleep((attempt + 1) * 2)
             else:
                 print(f"  [WARN] AI 摘要失败(重试3次) [{err_type}]: {err_msg}")
 
+    return None
+
 
 def summarize_batch(articles: list[dict], max_count: int = 50) -> list[dict]:
-    """批量为文章生成 AI 摘要，优先处理摘要较短的文章（如 Product Hunt 等短文案源）"""
+    """批量为文章生成 AI 摘要，优先处理摘要较短的文章"""
     if not DEEPSEEK_API_KEY:
         print("[AI摘要] 未配置 DEEPSEEK_API_KEY，跳过所有摘要")
         return articles
 
-    # 筛选需要摘要的文章
     need_summary = [a for a in articles if not a.get("ai_digest")]
-
-    # 优先给摘要短的文章生成 AI 解读（摘要越短越需要 AI 补充）
     need_summary.sort(key=lambda a: len(a.get("summary", "")))
-
     to_process = need_summary[:max_count]
 
     short_count = sum(1 for a in to_process if len(a.get("summary", "")) < 100)
@@ -103,5 +97,6 @@ def summarize_batch(articles: list[dict], max_count: int = 50) -> list[dict]:
         if digest:
             print(f"  [{i+1}/{len(to_process)}] ✓ {article['title'][:40]}...")
 
-    print(f"[AI摘要] 完成: {sum(1 for a in to_process if a.get('ai_digest'))} 条成功")
+    success = sum(1 for a in to_process if a.get("ai_digest"))
+    print(f"[AI摘要] 完成: {success} 条成功")
     return articles
