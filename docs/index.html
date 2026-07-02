@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI Radar — AI每日动态</title>
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#0f1117; color:#e4e6f0; font-family:-apple-system,BlinkMacSystemFont,sans-serif; padding:20px; }
+.container { max-width:720px; margin:0 auto; }
+h1 { font-size:24px; } h1 span { color:#6c8cff; }
+.stats { display:flex; gap:16px; margin:16px 0; flex-wrap:wrap; }
+.stat { background:#1a1d2e; border-radius:8px; padding:12px 16px; }
+.stat .num { font-size:24px; font-weight:bold; color:#6c8cff; }
+.stat .label { font-size:12px; color:#8b8fa8; }
+.card { background:#1a1d2e; border-radius:8px; padding:16px; margin-bottom:12px; border:1px solid #2a2d3e; }
+.card-header { font-size:12px; color:#8b8fa8; margin-bottom:8px; display:flex; gap:8px; }
+.title { font-size:16px; color:#e4e6f0; text-decoration:none; font-weight:600; display:block; margin-bottom:8px; }
+.title:hover { color:#6c8cff; }
+.summary,.digest { margin-top:8px; padding:10px 12px; border-radius:4px; font-size:14px; }
+.summary { background:#141720; color:#a0a4b8; } .summary b { color:#5a5e78; font-size:12px; }
+.digest { background:rgba(108,140,255,0.1); border-left:3px solid #6c8cff; color:#e4e6f0; } .digest b { color:#6c8cff; font-size:12px; }
+.footer { text-align:center; color:#4a4d5e; font-size:12px; margin-top:24px; padding:16px; }
+.footer a { color:#6c8cff; }
+</style>
+</head>
+<body>
+<div class="container">
+<h1><span>AI</span> Radar 每日动态</h1>
+<div class="stats">
+<div class="stat"><div class="num">282</div><div class="label">总动态</div></div>
+<div class="stat"><div class="num">33</div><div class="label">🚀 产品</div></div>
+<div class="stat"><div class="num">62</div><div class="label">📄 论文</div></div>
+<div class="stat"><div class="num">151</div><div class="label">📰 新闻</div></div>
+<div class="stat"><div class="num">36</div><div class="label">💻 开源</div></div>
+<div class="stat"><div class="num">6</div><div class="label">数据源</div></div>
+</div>
+
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873886149055495?f=rss" target="_blank" class="title">美国养老金即将被动调仓，300亿美元卖盘“已在路上”</a>
+      <div class="summary"><b>📝 原文</b><p>随着2026年上半年临近收官，美国大型养老金计划即将启动半年度资产再平衡操作，市场测算预计将有总计300亿美元的美股资产集中在本周一和周二两日强制抛售。美国公共养老金、企业固定收益养老计划和目标日期基金普遍执行60%股票+40%固收资产的硬性配置框架，该比例写入机构投资政策文件。美国大型养老金的股票仓位已经显著超配，而债券明显仓位不足。因此，在这最后两天的半年度结算窗口中，华尔街分析师预计，一场300亿美元规模的大型抛售冲击将不可避免。（新浪财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873891089044745?f=rss" target="_blank" class="title">兆易创新A股逼近涨停，刷新历史新高记录</a>
+      <div class="summary"><b>📝 原文</b><p>兆易创新A股逼近涨停，成交额突破400亿元，刷新历史新高记录。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873887567123714?f=rss" target="_blank" class="title">Prosus全年生态系统收入增长57%</a>
+      <div class="summary"><b>📝 原文</b><p>6月29日，Prosus公布截至2026年3月31日的2026财年业绩，公司生态系统（Ecosystem）收入同比增长57%至97亿美元，经调整EBITDA同比增长84%至13亿美元，自由现金流创历史新高，达15亿美元。与此同时，Prosus宣布全年股息提高40%，持续推进股票回购，并完成20亿美元非核心资产出售。（界面）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873878604502281?f=rss" target="_blank" class="title">热浪侵袭欧洲多国，多地接连刷新6月高温历史纪录</a>
+      <div class="summary"><b>📝 原文</b><p>6月，刚刚熬过5月热浪的欧洲再次迎来闷热天气，多地出现破纪录高温。这并不是单独的天气事件，气候变化正让极端天气变得更常见，持续时间也更长。从联合国官员到气候领域科学家都发出警告，全球必须加快应对气候挑战的进程。世界天气归因联盟26日发布的一项最新研究显示，受气候变化影响，欧洲高温天气发生概率已是20年前的200倍。（新华社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873873423062278?f=rss" target="_blank" class="title">SK集团董事长崔泰源：到2035年建设15GW AI数据中心，总投资达1000万亿韩元</a>
+      <div class="summary"><b>📝 原文</b><p>韩国SK集团董事长崔泰源6月29日表示，集团计划到2035年建成15吉瓦（GW）AI数据中心容量，并将其打造为韩国国家级基础设施和“实体AI（Physical AI）时代”的核心底座。崔泰源称，该计划总投资规模将达到1000万亿韩元。（界面）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873872147272963?f=rss" target="_blank" class="title">马斯克：SpaceX计划今年每月发布一个全新的人工智能模型</a>
+      <div class="summary"><b>📝 原文</b><p>当地时间周日（28日），马斯克在其社交媒体平台X上发文称，旗下最新一代大语言模型Grok 4.5已正式在SpaceX和特斯拉内部开启Beta测试，之后才会进行更广泛的推广。马斯克还表示，SpaceX计划在今年剩余的时间里每月发布一个“完全从零开始训练”的全新人工智能模型。这番言论暗示，未来的版本可能并非对现有系统的简单改进，而是通过全新训练构建的全新基础模型。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873865960248324?f=rss" target="_blank" class="title">交通运输部：上周全国高速公路货车通行5479.3万辆，环比增长8.91%</a>
+      <div class="summary"><b>📝 原文</b><p>36氪获悉，据交通运输部消息，6月22日—6月28日，全国物流保通保畅运行数据：国家铁路运输货物8002.6万吨，环比下降0.89%；全国高速公路货车通行5479.3万辆，环比增长8.91%；监测港口完成货物吞吐量27027.9万吨，环比增长3.09%，完成集装箱吞吐量721.5万标箱，环比增长5.27%；民航保障航班12.2万班（其中货运航班5118班，包括国际货运航班3378班，国内货运航班1740班），环比增长4.90%；邮政快递揽收量约38.92亿件，环比下降4.70%；投递量约39.09亿件，环比下降4.98%。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873859365328133?f=rss" target="_blank" class="title">人工智能助推美国电力行业并购交易规模突破2000亿美元，创下历史新高</a>
+      <div class="summary"><b>📝 原文</b><p>人工智能热潮正推动美国电力及公用事业行业并购交易规模创下新高，各大企业争相募资，为数据中心建设能源配套基础设施。德勤的调研数据显示，今年前五个月，该行业并购交易总额达到创纪录的2036亿美元，较去年全年1417亿美元的规模高出四成以上。数据中心相关投资规模达1515亿美元，较去年同期公布的687亿美元翻了一倍有余；2025年全年的数据中心投资总额为3210亿美元。（新浪财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873858183255302?f=rss" target="_blank" class="title">百度OCR模型Unlimited OCR在HuggingFace、GitHub四榜登顶</a>
+      <div class="summary"><b>📝 原文</b><p>36氪获悉，近日，百度正式发布并开源端到端OCR模型Unlimited OCR。模型发布次日即登顶GitHub Daily Trending榜、Python榜，在HuggingFace全球模型总趋势榜和多模态模型趋势榜也均排名第一。Unlimited OCR面向长文档解析场景打造，总参数规模3B、推理时激活参数仅约570M。公开评测结果显示，Unlimited OCR在OmniDocBench v1.6基准测试中取得 93.92% 综合成绩，刷新端到端OCR最新纪录。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873850993480711?f=rss" target="_blank" class="title">沪深两市成交额连续第11个交易日突破3万亿元</a>
+      <div class="summary"><b>📝 原文</b><p>36氪获悉，沪深两市成交额连续第11个交易日突破3万亿元。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873841411773447?f=rss" target="_blank" class="title">三星集团李在镕：计划将光州作为芯片生产基地</a>
+      <div class="summary"><b>📝 原文</b><p>三星集团会长李在镕称，计划将光州作为芯片生产基地，计划在忠清建设HBM工厂。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873839867958537?f=rss" target="_blank" class="title">创业板指午后翻红</a>
+      <div class="summary"><b>📝 原文</b><p>36氪获悉，创业板指午后翻红，此前一度跌超2%。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873834032239621?f=rss" target="_blank" class="title">英伟达支持的Firmus与DayOne将在印尼建造AI数据中心园区</a>
+      <div class="summary"><b>📝 原文</b><p>由英伟达支持的数据中心运营商Firmus将在印尼建设一座AI数据中心园区。该公司表示，该项目将在前六年内带来价值高达300亿美元的协议。澳大利亚企业Firmus在一份声明中宣布，已与英伟达达成一项为期八年的合作协议，在印尼巴淡岛建设一座装机容量达360兆瓦的专属英伟达DSX AI工厂园区；该岛屿与新加坡隔海相望。Firmus表示，这一大型数据中心项目将与总部位于新加坡的DayOne联手开发。（新浪财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873820741358853?f=rss" target="_blank" class="title">三星和SK海力士将在800万亿韩元项目中各自建设2座芯片工厂</a>
+      <div class="summary"><b>📝 原文</b><p>三星和SK海力士将在800万亿韩元项目中各自建设2座芯片工厂。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873817765385481?f=rss" target="_blank" class="title">韩国总统李在明：将加快AI基础设施建设，推动芯片、数据中心和实体AI发展</a>
+      <div class="summary"><b>📝 原文</b><p>6月29日，韩国总统李在明表示，韩国必须加快布局芯片、AI数据中心和实体AI（Physical AI）等关键领域，以抢占竞争优势。他表示，政府将统筹公共和私人资源，建设完整的AI生态系统，并加快已在建半导体生产基地建设。李在明还指出，现有龙仁、平泽半导体产业集群的电力和供水能力已接近极限，韩国需要开辟新的投资选址，在全国范围内扩大AI数据中心布局，并完善工业数据采集和利用体系，推动实体AI生态发展。同时，他强调应促进区域均衡发展，缓解首都圈资源过度集中的问题。（界面）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873813667402753?f=rss" target="_blank" class="title">韩国政府：预计将在西南部建设四座芯片厂，投资约800万亿韩元</a>
+      <div class="summary"><b>📝 原文</b><p>韩国政府称，预计将在西南部建设四座芯片厂，投资约800万亿韩元；预计未来15年在芯片领域的投资将至少达到30万亿韩元，包括下一代内存、边缘人工智能和国防等领域。预计在忠清地区的芯片封装集群投资达到81万亿韩元。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873812715721984?f=rss" target="_blank" class="title">益普生将以最高17.5亿美元收购Kartos Therapeutics</a>
+      <div class="summary"><b>📝 原文</b><p>益普生周一表示，已同意收购Kartos Therapeutics，交易价值最高17.5亿美元，旨在加强这家法国制药商的癌症药物管线。益普生表示，根据协议，公司将预付4.5亿美元收购Kartos，另有最高13亿美元的额外付款取决于监管和销售目标。该公司补充说，这笔交易预计将在第三季度末前完成，前提是满足惯常成交条件。（新浪财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873811317478661?f=rss" target="_blank" class="title">韩国官员：预计在五年内将DRAM生产能力翻倍，预计全球内存市场将在5年内增长四倍</a>
+      <div class="summary"><b>📝 原文</b><p>韩国官员称，预计在五年内将DRAM生产能力翻倍，预计全球内存市场将在5年内增长四倍。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873810688988160?f=rss" target="_blank" class="title">德意志银行聘任瑞穗前首席策略师Shoki Omori</a>
+      <div class="summary"><b>📝 原文</b><p>日本规模达7.2万亿美元的国债市场回暖，各家银行争相扩充相关专业人才，德意志银行股份有限公司于东京引入前瑞穗金融集团固收策略师Shoki Omori 。媒体获取一份内部备忘录，该行发言人亦予以证实：Shoki Omori已入职这家德国投行的日本本地投管子公司，担任固定收益策略师。他将面向日本本土及海外客户，负责日本利率市场的研究与分析工作。（新浪财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3873806295274756?f=rss" target="_blank" class="title">36氪首发 | 海思、中兴团队创业，领域顶尖科学家加持，数字相控阵芯片厂商获厦门投资</a>
+      <div class="summary"><b>📝 原文</b><p>作者&nbsp;|&nbsp;乔钰杰
+  编辑&nbsp;|&nbsp;袁斯来
+  硬氪获悉，广州宸思通讯科技有限公司（以下简称“宸思科技”）近日完成新一轮融资，由厦门高新投独家投资。本轮资金将主要用于核心技术研发和产品储备，加速数字相控阵芯片及模组产品的迭代升级。
+  宸思科技成立于2020年，总部位于广州黄埔区，聚焦数字相控阵芯片及模组研发，具备“芯片+模组+产品”的垂直整合能力，可为低空经济、卫星互联网、雷达、测控通信数据链等场景提供定制化解决方案。
+  近年，随着低空经济、卫星互联网等产业快速发展，数字相控阵技术正迎来新的市场机遇。相比传统模拟相控阵，数字相控阵能够实现更灵活的波束控制</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3873799962137860?f=rss" target="_blank" class="title">李在明：韩国需要加快芯片生产基地建设以满足需求，西南地区将在新项目中投资5万亿至20万亿韩元</a>
+      <div class="summary"><b>📝 原文</b><p>韩国总统李在明称，芯片和人工智能领域竞争非常激烈，韩国需要加快芯片生产基地建设以满足需求；将通过投资西南地区扩大芯片供应能力，西南地区将在新项目中投资5万亿至20万亿韩元，光州、全罗可能在项目中投资520万亿韩元。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3873786445813001?f=rss" target="_blank" class="title">被健康家电「背刺」后，这届年轻人更会买了</a>
+      <div class="summary"><b>📝 原文</b><p>那些年，我们交过的“健康”智商税
+  马上就要撞到墙了。
+  王焱的大脑还没反应过来，身体已经感觉到了一股推背感。在试驾这辆主打“智能”与“安全”的新能源汽车时，他不小心把油门当成了刹车，一脚踩了下去，等他意识到的时候，车子正在像头野兽一般往前猛窜。
+  在极其危险的几秒里，王焱以为这款车在发布会上被吹上天的风险预警与瞬间干预能立刻奏效。然而，智驾系统一片死寂，没有任何警报声，更没有主动刹停的迹象。最终，还是王焱靠着本能反应，死死地踩住了刹车，在距离墙面几十厘米的地方，把车刹停了。
+  惊魂未定之余，一种对品牌过度营销的反感，从王焱心底蔓延。实际体验和宣传效果大相径庭，他走下车，把这个品牌也顺</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3873710996902912?f=rss" target="_blank" class="title">36氪首发 | URTOPIA联创做了款智能指环，众筹已破千万元</a>
+      <div class="summary"><b>📝 原文</b><p>作者&nbsp;|&nbsp;张子怡
+  编辑&nbsp;|&nbsp;袁斯来
+  近日，AI可穿戴品牌AIVELA宣布完成数百万美元首轮融资。本轮融资由线性资本领投，锋领资本跟投，智能电助力自行车品牌URTOPIA等产业方共同加注。
+  本轮融资将主要用于下一代AI可穿戴产品研发、健康数据与AI Agent能力建设、全球市场拓展以及核心团队扩张。AIVELA将以智能指环、智能手链等贴身可穿戴产品为起点，面向全球市场构筑融合健康感知、自然交互与AI健康服务的新一代消费科技品牌。
+  当前，消费者的健康需求正从单纯的运动记录，逐渐向睡眠、压力管理等长期的身体状态监测转移，在海外市场，已经跑出Ou</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3873706225751296?f=rss" target="_blank" class="title">36氪首发 | Ebike公司获Brizan Ventures、高秉强参与超数亿融资，要进军外骨骼市场</a>
+      <div class="summary"><b>📝 原文</b><p>作者&nbsp;|&nbsp;张子怡
+  编辑&nbsp;|&nbsp;袁斯来
+  硬氪获悉，全球智能电助力自行车品牌「URTOPIA」近日已完成B轮融资，融资总额超2亿元人民币。本轮融资由Brizan Ventures与桐乡市政府产业基金领投，高秉强、Kungho Fund、光远和声等机构持续加注。
+  本轮融资完成后，URTOPIA将继续加大在核心技术研发、全球市场拓展、供应链建设和组织能力升级方面的投入，并推动公司从智能电助力自行车品牌，向以户外具身智能和人机耦合智能运动技术为核心的公司发展。
+  在URTOPIA的长期规划中，智能E-bike并不是其业务的终点，而是其拓展“户外具身智能</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3873681978840071?f=rss" target="_blank" class="title">秋声 | 海光芯正IPO背后，卖铲生意为何越做越亏？</a>
+      <div class="summary"><b>📝 原文</b><p>本文约2500字，建议阅读5分钟
+  作者&nbsp;|&nbsp;彭孝秋
+  
+   编者按：AI大爆发之际，越来越多公司走向资本市场。每一份招股书翻动的声音里，都藏着一家公司想说与未曾明说的全部。
+   鉴于此，硬氪特推出「秋声」专栏。秋声取自欧阳修《秋声赋》，借“听秋声”之意，产业冷暖，辨公司成色，记录企业冲刺IPO途中那些被写下与被隐藏的真实。这是我们第四期，海光芯正。
+  
+  6月29日，北京海光芯正（01191.HK）正式在港交所敲钟上市，此次IPO招股价114港元，每手50股、入场费5757.48港元。按发售价计，公司市值约102.08亿港元，募资净额约14.15亿港元。
+  </p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3872276297618436?f=rss" target="_blank" class="title">36氪首发 | 「CAYE咖爷科技」完成近4亿元B轮融资，系商用全自动咖啡机赛道单笔最大规模融资</a>
+      <div class="summary"><b>📝 原文</b><p>作者 | 钟艺璇
+  36氪获悉，商用全自动咖啡机品牌「CAYE咖爷科技」已完成近4亿元B轮融资，本轮融资由老股东美团龙珠领投，柏睿资本、高瓴创投、苏创投、嘉宾资本等机构联合跟投。这也是目前商用全自动咖啡机赛道规模最大的单笔融资。&nbsp;
+  CAYE咖爷是36氪持续关注的公司，该公司成立于2022年12月，围绕自研&nbsp;Bionic Barista&nbsp;仿生咖啡师系统，CAYE咖爷对咖啡研磨、粉重控制、布粉填压、加压萃取等核心工艺进行重新设计，重新定义商用全自动咖啡机。&nbsp;
+  目前，CAYE咖爷的咖啡机产品已经进入精品连锁咖啡、商业连锁咖啡门店，其中不乏国内知名咖啡</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3868055841641476?f=rss" target="_blank" class="title">港大教授李弘扬创业做通用全身具身大脑，获真格高榕IDG五源等数亿种子轮融资｜硬氪独家</a>
+      <div class="summary"><b>📝 原文</b><p>作者｜黄楠
+  编辑｜袁斯来
+  硬氪独家获悉，通用全身具身大脑公司「源策未来Archon Robotics」近日完成数亿元种子轮融资，本轮投资方包括真格基金、高榕创投、IDG资本、五源资本等头部美元基金，以及戈壁创投与香港大学联名基金、奇绩创坛、上海创智学院等。光源资本担任独家财务顾问。
+  本轮资金将主要用于全身人形基础模型研发、多模态全身动作数据采集、人才团队扩充，以及多地研发中心与产业合作生态搭建，加速在今年内实现开源人形基座模型落地。
+  源策未来成立于2026年4月，研发总部位于上海市徐汇区漕河泾开发区。公司专注研发通用全身人形基座模型，构建全身智能（Whole-body Inte</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-29</span>
+      </div>
+      <a href="https://36kr.com/p/3873539789034501?f=rss" target="_blank" class="title">中国卖家涌向拉美：高增长与合规门槛齐升丨最前线</a>
+      <div class="summary"><b>📝 原文</b><p>作者丨欧雪
+  编辑丨袁斯来
+  6月26日，亚马逊全球开店在杭州宣布推出“拉美速通计划”，计划在2026年内面向3000个具备长期投入意愿的中国品牌，提供巴西本土公司注册协助、墨西哥RFC税号解决方案、最高12000美元补贴及物流费用减免等支持，帮助卖家全面扎根拉美市场。
+  拉美正在成为跨境电商的新热土。据eMarketer数据，2025年拉美零售电商市场规模接近1900亿美元，增速是全球平均水平的1.5倍，其中巴西和墨西哥贡献了绝大部分销售额。
+  亚马逊数据也印证了这一增长趋势：2026年第一季度，新上线巴西和墨西哥站点的中国卖家销售额是去年同期的2倍以上；墨西哥Hot Sale大促期</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/p/3873476968272902?f=rss" target="_blank" class="title">8点1氪丨两大存储巨头今日发布大规模投资计划；江淮汽车股价腰斩，章建平9日套现近3亿元；Anthropic Fable 5有望很快恢复访问</a>
+      <div class="summary"><b>📝 原文</b><p>今日热点导览
+  
+   《给阿嬷的情书》总票房已突破19亿元
+   梁文锋署名，DeepSeek发布最新论文
+   WPS回应C盘占用问题，即将更新七月版本上线磁盘存储管理功能
+   触屏MacBook将搭载M5芯片发布，苹果计划跳过M6 Pro及M6 Max
+   美国监管部门关闭针对特斯拉Model 3及Model Y转向失控调查
+  
+  TOP 3大新闻
+  韩国将于6月29日宣布三星、SK集团的多个大型项目
+  韩国将于6月29日宣布“三大工程”计划，韩国总统李在明将与政府各部门、三星电子和SK的官员会面，并发布政策和投资公告。李在明将于下午2点在总统府青瓦台发表讲话，届时韩国产业</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://github.com/kamaludu/bash4llm/" target="_blank" class="title">Show HN: Bash4LLM+ – A lightweight, dependency-free Bash wrapper for LLM APIs</a>
+      <div class="summary"><b>📝 原文</b><p>Bash4LLM is a single-file Bash wrapper for interacting with LLMs from the terminal.  I created it because I wanted something simple that worked without installing Python, Node, or any other runtime.It uses only Bash, curl, and jq. You can send prompts, start a small chat, process files line by line,</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/" target="_blank" class="title">GLM 5.2 beats Claude in our benchmarks</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/
+Comments URL: https://news.ycombinator.com/item?id=48709670
+Points: 703
+# Comments: 338</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">OpenAI Blog</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://openai.com/index/hp-frontier-partnership" target="_blank" class="title">HP Inc. launches Frontier strategic partnership with OpenAI</a>
+      <div class="summary"><b>📝 原文</b><p>HP Inc. scales its OpenAI Frontier partnership to deploy AI across customer experiences, software development, and enterprise operations.</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html" target="_blank" class="title">Professor denounces mass AI fraud on an exam at Brown</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://english.elpais.com/education/2026-06-28/ai-fraud-at-brown-university-academic-integrity-is-at-risk.html
+Comments URL: https://news.ycombinator.com/item?id=48708991
+Points: 365
+# Comments: 478</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://antoine.fi/mri-analysis-using-claude-code-opus" target="_blank" class="title">I used Claude Code to get a second opinion on my MRI</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://antoine.fi/mri-analysis-using-claude-code-opus
+Comments URL: https://news.ycombinator.com/item?id=48708941
+Points: 403
+# Comments: 523</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://www.bloomberg.com/news/articles/2026-06-28/austria-lobbies-eu-to-host-anthropic-after-us-access-curbs" target="_blank" class="title">Austria Lobbies EU to Host Anthropic After US Access Curbs</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://www.bloomberg.com/news/articles/2026-06-28/austria-lobbies-eu-to-host-anthropic-after-us-access-curbs
+Comments URL: https://news.ycombinator.com/item?id=48707146
+Points: 47
+# Comments: 43</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://www.cnbc.com/2026/06/28/google-limits-metas-use-of-its-gemini-ai-models-ft-reports.html" target="_blank" class="title">Google limits Meta's use of its Gemini AI models</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://www.cnbc.com/2026/06/28/google-limits-metas-use-of-its-gemini-ai-models-ft-reports.html
+Comments URL: https://news.ycombinator.com/item?id=48707103
+Points: 48
+# Comments: 12</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://github.com/openai/codex/issues/2847" target="_blank" class="title">A way to exclude sensitive files issue still open for OpenAI Codex</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://github.com/openai/codex/issues/2847
+Comments URL: https://news.ycombinator.com/item?id=48706714
+Points: 79
+# Comments: 57</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872661140706562?f=rss" target="_blank" class="title">汽车安全迎来新标准 汽车侧面碰撞迎20年最严标准升级</a>
+      <div class="summary"><b>📝 原文</b><p>6月28日消息，7月1日起，我国将实施一批汽车安全碰撞新国标。其中《汽车侧面碰撞的乘员保护》是近二十年来最严苛的一次碰撞安全标准升级。在中国汽车技术研究中心汽车安全试验室，专家介绍，在新国标中，采用的侧面碰撞台车质量从950公斤大幅提升至1400公斤。除了碰撞上的高标准新国标即将实施，7月1日起，《电动汽车安全要求》及《电动汽车用动力蓄电池安全要求》两项强制性国家标准也将正式实施。其中，动力电池热失控的判定要求，提升为“不起火、不爆炸”。新国标还首次将“一键断电”定义为物理断电装置，彻底取代以往依赖软件控制的断电方式。 （央视财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872658132063236?f=rss" target="_blank" class="title">立新能源：2026年公司新增风电装机规模250万千瓦</a>
+      <div class="summary"><b>📝 原文</b><p>立新能源在投资者网上集体接待日表示，2026年公司新增风电装机规模250万千瓦，在建储能项目装机规模40万千瓦/160万千瓦时。公司将持续聚焦主责主业，深耕风光储业务发展，积极抢抓“疆电外送”特高压外送配套优质风光电源项目，拓展新疆优质风光资源，推进新能源大基地建设，重点在南疆布局独立储能项目，稳步拓展售电业务，积极研究探索绿电直供、综合能源服务等增值业态。（证券时报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872616564757513?f=rss" target="_blank" class="title">登云股份：参股公司采矿许可证到期及3000万元银行借款逾期</a>
+      <div class="summary"><b>📝 原文</b><p>登云股份6月28日公告，公司近日收到间接持有25%股权的参股公司陕西汉阴黄龙金矿有限公司（简称“汉阴黄龙”）通知，获悉其持有的采矿许可证已于2026年6月26日到期，目前尚未完成续证手续。同时，汉阴黄龙向陕西汉阴农村商业银行股份有限公司（简称“汉阴农商行”）申请的3000万元流动资金借款已逾期。（界面）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872614769202178?f=rss" target="_blank" class="title">飞龙股份：控股股东及其一致行动人拟减持公司不超1.8078%股份</a>
+      <div class="summary"><b>📝 原文</b><p>飞龙股份公告，持股31.5650%的公司控股股东河南省宛西控股股份有限公司（简称“宛西控股”）及持股5.1085%的公司实际控制人、宛西控股一致行动人孙耀忠计划十五个交易日后的三个月内，以集中竞价方式减持公司股份不超过574.78万股（占公司总股本的1%）；以大宗交易方式减持公司股份不超过464.28万股（占公司总股本的0.8078%）。（第一财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872623912571910?f=rss" target="_blank" class="title">悟空安全上线“弹必赔”，主打“0添加”安全软件</a>
+      <div class="summary"><b>📝 原文</b><p>今日，悟空安全宣布上线“流氓弹窗”弹必赔，用户安装产品后，如弹出推广类弹窗，可参与举报并获得最高100元话费奖励。与此同时，悟空安全提出“0添加”的产品理念，默认使用场景下不主动新增广告、捆绑推荐等影响体验的信息，并通过AI识别与云规则库能力提升弹窗拦截效率，希望为用户提供更纯净、更少干扰的电脑使用体验。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872609654560006?f=rss" target="_blank" class="title">艾迪药业：收到政府补助款项共计910万元</a>
+      <div class="summary"><b>📝 原文</b><p>艾迪药业公告，公司于近日收到政府补助款项共计910万元，为与收益相关的政府补助，占公司最近一个会计年度经审计归母净利润绝对值的46.59%。（第一财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872573871215621?f=rss" target="_blank" class="title">特锐德：入选沙特国家能源公司合格制造商名录</a>
+      <div class="summary"><b>📝 原文</b><p>特锐德公告称，公司XBG系列380kV及以下高压预制舱变电站正式被纳入沙特国家能源公司(SE)合格制造商名录，取得SE核心供应商准入资格，成为SE经过测试和批准的材料名录（LOTAM）中，首家入围的380kV及以下高压预制舱变电站供应商。依托这一资格，公司可全面参与沙特国家电网高压变电站升级改造、新能源大基地建设、“2030愿景”重点变电站工程及新城开发等重大项目，正式进入沙特及中东地区电网高压变电站建设核心供应链体系。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872561078637577?f=rss" target="_blank" class="title">好利科技：筹划公司控制权变更事项 6月29日起停牌</a>
+      <div class="summary"><b>📝 原文</b><p>好利科技6月28日公告，公司于近日收到公司实际控制人汤奇青通知，获悉公司控股股东旭昇亚洲投资有限公司、实际控制人汤奇青正在筹划涉及公司控制权变更相关事项，该事项可能导致公司控股股东、实际控制人发生变更。公司股票自6月29日开市起停牌，预计停牌时间不超过2个交易日。（e公司）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872541066515457?f=rss" target="_blank" class="title">黄河旋风：黄河集团所持公司8.82%股份被轮候冻结</a>
+      <div class="summary"><b>📝 原文</b><p>黄河旋风6月28日公告，公司持股5%以上股东黄河集团累计被轮候冻结股份数量为1.27亿股��占其所持有股份100%，占公司总股本8.82%。黄河集团不属于公司的控股股东、实际控制人，该事项不会导致公司控制权发生变更，不会对公司日常经营和管理造成影响。（e公司）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872555153544450?f=rss" target="_blank" class="title">中京电子：未来PCB市场竞争预计将会加剧</a>
+      <div class="summary"><b>📝 原文</b><p>中京电子(002579)6月28日发布股票交易异常波动暨风险提示公告，公司股票连续2个交易日内收盘价格涨幅偏离值累计超过20%。公司关注到近期市场对PCB行业关注度较高，伴随行业发展吸引众多同行调整战略、加码资源布局，未来市场竞争预计将会加剧。公司特此郑重提醒广大投资者，短期市场热点受多种复杂因素影响，务必保持理性投资，注意风险。（e公司）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872540399375361?f=rss" target="_blank" class="title">中富通：股东拟合计减持不超0.671%公司股份</a>
+      <div class="summary"><b>📝 原文</b><p>中富通6月28日公告，公司股东常德中科芙蓉创业投资有限责任公司、晋江市融磊商务信息咨询有限公司及高级管理人员林忠阳计划减持公司股份。其中，股东常德中科芙蓉创业投资有限责任公司（持股0.17%）计划自减持计划公告之日三个交易日后的三个月内，以集中竞价交易或大宗交易方式减持38.15万股（占公司总股本0.17%），减持价格根据市场价格确定，减持原因为自身资金需要。股东晋江市融磊商务信息咨询有限公司（持股1.25%）计划以集中竞价交易或大宗交易方式减持114.06万股（占公司总股本0.50%），减持价格根据市场价格确定，减持原因为自身资金需要。高级管理人员林忠阳（持股0.0040%）计划自减持计划公</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872537881466120?f=rss" target="_blank" class="title">银河微电：拟收购恒泰柯100%股权 股票及可转债明起复牌</a>
+      <div class="summary"><b>📝 原文</b><p>6月28日，银河微电公告称，公司拟发行股份购买恒泰柯半导体(上海)有限公司100%股权并募集配套资金，预计不构成重大资产重组及重组上市。公司股票及可转债将于6月29日开市起复牌。（每经网）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872536345826563?f=rss" target="_blank" class="title">金山办公：拟以2.5亿元-5亿元回购公司股份</a>
+      <div class="summary"><b>📝 原文</b><p>金山办公公告，拟以2.5亿元-5亿元回购公司股份，回购价格不超过352.11元/股。（第一财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872535871853829?f=rss" target="_blank" class="title">超声电子：未供货英伟达，高速覆铜板等研发项目存在不确定性</a>
+      <div class="summary"><b>📝 原文</b><p>超声电子6月28日发布公告，公司股票于2026年6月24日、6月25日、6月26日连续3个交易日收盘价格涨幅偏离值累计超过20%，属于股票交易异常波动情形。经核实，公司经营情况正常，近期公司经营情况及内外部经营环境均没有发生重大变化。公司下属覆铜板公司目前没有生产M8、M9覆铜板，现阶段M7/M8级高速覆铜板处于研发测试阶段；公司800G、1.6T光模块配套PCB在研究跟进中。上述研发项目后续推进进度、客户认证、量产落地均存在不确定性，暂未实现规模化供货，截至目前，上述产品没有产生相应营收。公司生产工业用超声检测仪器，可应用于运输管道、轨道设施、电力设施等领域无损检测、定位、评估与诊断；产品虽</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872534645953795?f=rss" target="_blank" class="title">创新医疗：控股子公司赛博灵科AM5取得医疗器械注册证</a>
+      <div class="summary"><b>📝 原文</b><p>6月28日，创新医疗公告，控股子公司博灵脑机科技有限公司研发的“上肢主被动运动康复训练系统”，于2026年6月26日取得了浙江省药品监督管理局的注册批准，获得医疗器械注册证，注册证编号为浙械注准20262190344。产品适用于由中枢神经损伤导致的上肢功能障碍的患者进行康复训练。（每经网）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872534085031173?f=rss" target="_blank" class="title">雅克科技：目前没有六氟化钨相关业务</a>
+      <div class="summary"><b>📝 原文</b><p>雅克科技6月28日发布公告，公司股票交易价格连续三个交易日（2026年6月24日、2026年6月25日、2026年6月26日）收盘价格涨幅偏离值累计超过20%，属于股票交易异常波动情形。经核实，目前，公司主要以电子材料业务和LNG保温绝热板材业务为发展方向。其中，电子材料业务的产品主要包括半导体前驱体材料、光刻胶及配套试剂、电子粉体材料、含氟类特种气体、半导体材料输送系统（LDS）等。公司关注到网络上有关于公司特种气体业务的相关讨论，公司的含氟类特种气体产品主要为四氟化碳和六氟化硫，目前没有六氟化钨相关业务。2025年度，公司含氟类特种气体的营业收入占公司总体营业收入的5.79%。敬请广大投资</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872533279446277?f=rss" target="_blank" class="title">信通电子：部分董事、高管及大股东自愿承诺6个月内不减持公司股份</a>
+      <div class="summary"><b>📝 原文</b><p>信通电子公告，公司于近日收到部分董事、高级管理人员及大股东送达的承诺函。承诺人所持公司首次公开发行股票前的股份限售期将于2026年7月1日截止。基于对公司价值的认可和对未来发展的信心，承诺人自愿承诺：自前述股份限售期满之日起6个月内，即2026年7月1日至2026年12月31日，不以任何方式转让或减持所持有的公司股份。在上述承诺期间内，如公司发生资本公积转增股本、派送股票红利、配股、增发等情形产生新增股份，亦遵守该不减持承诺。（第一财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">💻 oss</span>
+        <span class="source">GitHub Trending</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://github.com/joker-alahram/MECCHA-CHAMELEON-Trainer-Aimbot-ESP" target="_blank" class="title">joker-alahram/MECCHA-CHAMELEON-Trainer-Aimbot-ESP</a>
+      <div class="summary"><b>📝 原文</b><p>⭐ 189 | Ultimate 2026 external trainer for MECCHA CHAMELEON. Includes customizable ESP, aimbot, fly mode, and timer editor for the best hide-and-seek experience.</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">💻 oss</span>
+        <span class="source">GitHub Trending</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://github.com/giorgigelashvili12/MECCHA-CHAMELEON-Trainer-Aimbot-ESP" target="_blank" class="title">giorgigelashvili12/MECCHA-CHAMELEON-Trainer-Aimbot-ESP</a>
+      <div class="summary"><b>📝 原文</b><p>⭐ 189 | Ultimate 2026 external trainer for MECCHA CHAMELEON. Includes customizable ESP, aimbot, fly mode, and timer editor for the best hide-and-seek experience.</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">💻 oss</span>
+        <span class="source">GitHub Trending</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://github.com/ryancameron555/MECCHA-CHAMELEON-Trainer-Aimbot-ESP" target="_blank" class="title">ryancameron555/MECCHA-CHAMELEON-Trainer-Aimbot-ESP</a>
+      <div class="summary"><b>📝 原文</b><p>⭐ 190 | Ultimate 2026 external trainer for MECCHA CHAMELEON. Includes customizable ESP, aimbot, fly mode, and timer editor for the best hide-and-seek experience.</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872502773437701?f=rss" target="_blank" class="title">韩国将于周一宣布三星、SK集团的多个大型项目</a>
+      <div class="summary"><b>📝 原文</b><p>韩国将于周一宣布“三大工程”计划，韩国总统李在明将与政府各部门、三星电子和SK的官员会面，并发布政策和投资公告。李在明将于下午2点在总统府青瓦台发表讲话，届时韩国产业通商部、科学技术信息通信部、气候能源环境部和国土交通部将公布三大工程的政策。三星电子和SK将发布企业投资计划。（华尔街见闻）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872498969252864?f=rss" target="_blank" class="title">智元第15000台通用具身机器人正式量产下线</a>
+      <div class="summary"><b>📝 原文</b><p>6月28日，智元宣布第15000台通用具身机器人精灵G2正式量产下线。
+
+智元机器人合伙人、高级副总裁、具身业务部总裁姚卯青表示，15000台量产下线印证了智元规模化量产到达新高度，也标志着中国人形机器人产业迈上了大规模真实场景应用。量产不是目的，只是一个过程，通过规模化量产让机器人在各行各业快速部署，在真实物理世界交互过程中去获取数据，通过数据飞轮让产品变得越来越智能、越来越稳定。（证券时报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872439600043009?f=rss" target="_blank" class="title">本周13股获南向资金持股量环比增长超20%</a>
+      <div class="summary"><b>📝 原文</b><p>据数据宝统计，本周南向资金合计成交净买入89.24亿港元，指数低位坚定加仓。从持股量变化来看，本周13股获南向资金持股量环比增长超20%，药捷安康-B居首，环比增长142.51%，其他还有国富量子、壁仞科技、建滔集团持股量环比增幅居前，持股量环比增幅分别为83.57%、52.95%、40.42%。（证券时报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://github.com/itsthelore/wayfinder-router" target="_blank" class="title">Wayfinder Router: deterministic routing of queries between local and hosted LLM</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://github.com/itsthelore/wayfinder-router
+Comments URL: https://news.ycombinator.com/item?id=48704373
+Points: 71
+# Comments: 22</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872220264879105?f=rss" target="_blank" class="title">《给阿嬷的情书》总票房已突破19亿元</a>
+      <div class="summary"><b>📝 原文</b><p>据网络平台数据，截至6月27日16时17分，上映59天的电影《给阿嬷的情书》总票房已突破19亿元。此前，该片官宣密钥延期，延长放映至7月31日。（上海证券报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872219380094217?f=rss" target="_blank" class="title">博世集团：董事会人事调整不会对博世中国各项业务运营产生任何影响</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日晚，博世集团官微发文表示，此次集团董事会人事调整不会对博世中国各项业务运营产生任何影响。中国始终是博世全球最重要的战略市场之一，也是集团重要的创新基地。未来，博世将一如既往携手广大客户和合作伙伴，持续深耕中国市场。公告显示，经与股东充分沟通并达成一致，史蒂凡·哈通（Dr. Stefan Hartung）主动申请于2026年6月30日卸任博世集团董事会主席职务。他也将同时退出博世集团董事会及罗伯特·博世工业信托公司管理层。2026年7月1日起，董事会副主席克里斯蒂安·菲舍尔（Dr. Christian Fischer）将接任该职务。同时，董事会成员马库斯·福施纳（Dr. Markus </p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872217703077120?f=rss" target="_blank" class="title">五菱印尼与Grab战略签约，Grab租赁平台将批量导入缤果车型</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，上汽通用五菱宣布，五菱印尼与东南亚出行平台Grab日前在雅加达完成战略合作签约及车辆交付，Grab租赁平台批量导入缤果车型，全面投入印尼网约车营运。在本次Grab合作落地前，五菱印尼已于6月17日与本土头部租赁公司MPM完成战略合作签约及批量交车。（界面）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872215366292738?f=rss" target="_blank" class="title">暑期机票预订量环比增长65%，航司优化航线提前布局</a>
+      <div class="summary"><b>📝 原文</b><p>全国暑运即将开始，民航方面，从目前的旅客预订情况来看，长线深度游和清凉避暑游成为今年暑期出行的两大主线，西北、东北等目的地热度持续攀升，机票预订量迎来大幅增长。去哪儿大数据研究院研究员石珂表示，截至目前，近一周预订7月至8月暑期出行的机票明显增长，环比上周增长65%。山西大同、贵州铜仁、西藏拉萨、内蒙古乌海、新疆和田的暑期机票预订增幅都达到50%以上。面对今年暑期长线游与避暑游交织的旺盛市场需求，各大航空公司正积极优化航线网络，通过加密热门目的地航班、投入宽体机型等方式精准增加运力供给，全力保障旅客暑期出行需求。（央视财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">🚀 product</span>
+        <span class="source">Product Hunt</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://www.producthunt.com/products/dotient" target="_blank" class="title">Dotient</a>
+      <div class="summary"><b>📝 原文</b><p>Your local semantic search app
+          
+          
+            Discussion
+            |
+            Link</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872171923723272?f=rss" target="_blank" class="title">乘联分会崔东树：5月中国汽车进口3.8万辆，同比降19%</a>
+      <div class="summary"><b>📝 原文</b><p>6月28日，乘联分会秘书长崔东树发文表示，2026年5月进口车进口3.8万辆，下滑19%，但由于2025年1月基数低，虽然美国与伊朗战争导致运输受阻，进口车总体下降较小，2026年1-5月进口汽车16万辆，同比下降11%。随着国产车的崛起和国际品牌本土化加速，近几年汽车进口持续低迷，进口车持续3年负增长，如果熨平波动，则是连续8年的负增长。（新浪财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872170864334086?f=rss" target="_blank" class="title">郭明錤：iOS 27将进一步深化与Apple Intelligence的系统级整合</a>
+      <div class="summary"><b>📝 原文</b><p>跟踪苹果产业链多年的分析师郭明錤发布报告指出，iOS 27将进一步深化与Apple Intelligence的系统级整合。其最新产业调查显示，为确保在AI负载下系统仍能顺畅运作，1H27新款配备A20处理器的较低阶iPhone之DRAM规格将升级至9GB（1.5GB×6-die），高于目前A19机型的8GB（2GB×4-die）。2H26配备A20Pro处理器的三款高阶机型（折叠机与两款18Pro机型）则维持12GB（1.5GBx8-die）。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872144382432257?f=rss" target="_blank" class="title">暑期档电影票房破15亿 80部影片集结暑期档</a>
+      <div class="summary"><b>📝 原文</b><p>据网络平台数据，截至目前，2026年暑期档电影总票房（含预售）突破15亿元。近日，2026暑期档电影片单发布，近80部中外影片在暑期档上映，包含革命历史、科幻、喜剧、动画等多元类型。（央视财经）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872143344817158?f=rss" target="_blank" class="title">央视曝手机测评作弊乱象</a>
+      <div class="summary"><b>📝 原文</b><p>记者调查发现，数码产品测评这个领域的高度技术化，长期以来处于“无人能实锤作弊乱象”的灰色地带。网络安全专家介绍，整套作弊体系分为三层，层层美化测评数据：第一层厂商专供测评博主的特供媒体机，硬件经过筛选优化；第二层固件内置识别程序，检测到博主身份并自动开启高性能模式；第三层云端远程控制，可实时下发测评作弊配置。当这套系统识别到某博主启动测评时，就会进入“作弊模式”，自动拉高CPU性能、调高屏幕亮度、优化后台加载逻辑，切换软件时仅加载界面而非完整应用，营造全程流畅的假象。边亮介绍，为了规避被发现的风险，这套测评作弊机制也经历了多轮迭代，隐蔽性越来越强。记者调查发现，由于特供样机、固件作弊、云端调控</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872142280840197?f=rss" target="_blank" class="title">近一周120多只个股获机构调研，广生堂调研机构数最多</a>
+      <div class="summary"><b>📝 原文</b><p>近一周（6月20日至26日）机构调研个股有120多只，广生堂调研机构数最多。广生堂有53家机构调研，包括6家基金公司、6家证券公司、8家私募等。胜宏科技、盛弘股份、联合化学、恒坤新材等个股均有20家以上机构评级，其中恒坤新材、广信材料、鼎龙股份等个股均有时下热门的光刻胶概念。从市场表现来看，近一周机构调研股平均跌超2%，东方钽业、京东方A、信德新材、汇成真空等个股均涨超10%。（人民财讯）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://jayacunzo.com/blog/your-move-chief" target="_blank" class="title">The best response to AI slop and online noise is from Robin Williams</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://jayacunzo.com/blog/your-move-chief
+Comments URL: https://news.ycombinator.com/item?id=48703452
+Points: 244
+# Comments: 140</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872141380080643?f=rss" target="_blank" class="title">华泰证券：5月工业企业利润总体向好，行业分化加剧</a>
+      <div class="summary"><b>📝 原文</b><p>华泰证券研报称，5月工业企业盈利增速较4月的24.7%略回落至21.1%，但仍高于一季度的15.5%且营收增速延续回升，显示企业盈利总体向好，其中能源及AI链相关行业为利润增长的主要支撑，而随着霍尔木兹海峡封锁超过三个月，供给冲击的影响深化，部分中下游企业产能利用率进一步走弱，行业盈利表现分化加剧。5月油价边际回落但整体上游石化链盈利增速仍在高位，而受益于全球AI投资需求强劲，电子计算机行业持续引领盈利及收入增长，对总体工业企业盈利的贡献从6.7个百分点提升至9.6个百分点，有色冶炼及化学制品分别贡献6.4、4.2个百分点，三者合计贡献约20.2个百分点，而内需相关下游制造业，利润增速仍偏弱，</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872140630692872?f=rss" target="_blank" class="title">国内首个第四代半导体材料全产业链项目落户郑州</a>
+      <div class="summary"><b>📝 原文</b><p>近日，郑州高新区与中科粉研（河南）超硬材料有限公司签署协议，中科粉研第四代半导体材料生产基地正式落户该区。该基地是国内首个第四代半导体材料全产业链项目，将为河南在全球独具优势的超硬材料产业链补上关键的一环。本次签约落地的生产基地，将依托中科粉研全球首条LPPHT微纳米金刚石产线的技术积累，为实现第四代半导体核心材料的自主研发、生产和规模量产打下坚实基础。 (河南日报)</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3872139558507784?f=rss" target="_blank" class="title">今年前五个月我国物流需求平稳增长，社会物流总额超146万亿元</a>
+      <div class="summary"><b>📝 原文</b><p>中国物流与采购联合会今天公布今年1到5月物流运行数据。物流需求总体保持平稳增长，新旧动能加快转换，结构升级态势持续显现。1—5月份，全国社会物流总额146.6万亿元，同比增长5.2%。其中，工业品物流总额同比增长5.4%。行业分化特征持续显现，采矿、非金属矿物制品业等传统资源类物流需求持续低位运行，而随着新质生产力加快培育，高端制造领域物流需求保持较快增长。5月份，高技术制造业相关物流需求同比增长15.1%，装备制造业相关物流需求同比增长9.5%，较上月均有所加快。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-28</span>
+      </div>
+      <a href="https://36kr.com/p/3867976058803459?f=rss" target="_blank" class="title">一折买 Miu Miu，谁在做奢侈品牌的"拼多多"？｜商业Friday</a>
+      <div class="summary"><b>📝 原文</b><p>文｜贺哲馨
+  编辑｜乔芊
+  Judy第一次意识到，原来打折的奢侈品也有准入门槛，是在申请加入On The List的一次特卖活动时。提交申请后的第三天，她依旧没有收到邀请消息。“我还以为填完资料就能进去。”她说。
+  按照平台规则，特卖活动需要邀请码才能进入。如果迟迟没有通过，则需要邀请两位好友注册，才能获得进入候补名单的机会。至于最终能否收到邀请码，没人说得清楚。
+  “有点像抽签，也有点像开盲盒。”Judy笑着说，“明明我是才是买家，结果搞得像在申请什么私人会员俱乐部。越进不去，越想进去看看。”
+  Judy试图进入的，是近年来正在中国一线城市兴起的一类新渠道——会员制奢侈品特卖平台。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">🚀 product</span>
+        <span class="source">Product Hunt</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://www.producthunt.com/products/lyto" target="_blank" class="title">Lyto</a>
+      <div class="summary"><b>📝 原文</b><p>"One AI agent across your browser, tools, and messages "
+          
+          
+            Discussion
+            |
+            Link</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/" target="_blank" class="title">Asian AI startups launch Mythos-like models</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/
+Comments URL: https://news.ycombinator.com/item?id=48697958
+Points: 238
+# Comments: 178</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871321432527875?f=rss" target="_blank" class="title">华为途灵平台完成3轮升级，覆盖鸿蒙智行五界</a>
+      <div class="summary"><b>📝 原文</b><p>36氪获悉，6月26日，鸿蒙智行举办了一场华为途灵平台专场TECH DAY技术沟通会。华为途灵平台依托华为在AI和通信领域的技术优势，将调校经验通过算法与软件沉淀，提升机械性能上限，并基于车型定位不断开放新的特性，快速迭代。在操控层面，华为途灵平台的全维感知系统融合了ADS感知信息、车辆状态信息、驾驶意图信息、云端数据信息、车身域信息和座舱域信息等多维度数据。底盘可以提前预判、主动调整。从2023年11月至今，华为途灵平台已完成3轮升级，覆盖鸿蒙智行五界车型。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871215128237313?f=rss" target="_blank" class="title">功率半导体再启阶梯式调价，有厂商表示“AI相关的电源功率订单爆满，根本做不过来”</a>
+      <div class="summary"><b>📝 原文</b><p>据《科创板日报》27日消息，由于AI算力集群功耗激增，功率半导体正成为存储之后的产业新增长引擎，行业再掀起一轮涨价潮。“我们AI相关的电源功率订单‘爆满’，现在订单根本做不过来”。一家功率半导体厂商人士向《科创板日报》记者表示，“因为公司算是少数具备量产能力的国产厂商，无论是面向数据中心800V HVDC等一次电源、服务器二次电源等产品，都已进入多家头部客户供应链并实现规模量产，所以订单需求十分旺盛。”多位业内人士判断，本轮成本驱动的涨价周期仍将持续一段时间，并且行业将加速功率器件低端产能的出清，市场份额将向具备IDM全链条能力或与上游深度绑定，且涉足高景气赛道的头部芯片企业集中。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871213411128577?f=rss" target="_blank" class="title">具身世界模型“我悟”通过合规备案</a>
+      <div class="summary"><b>📝 原文</b><p>6月26日，北京人形机器人创新中心慧思开物平台的双大脑模型天鹕（Pelican-VL）和我悟（WoW）同步完成北京市网信办最新一批生成式人工智能服务备案。北京人形将正式启动慧思开物全系列模型Token服务，计划分阶段面向产业客户、科研机构、开发者全面开放API调用能力。（界面新闻）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871212925588739?f=rss" target="_blank" class="title">兴业银行：上调代理上海黄金交易所个人贵金属买卖业务延期合约保证金比例</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，兴业银行发布公告，将在北京时间2026年6月29日（周一）收盘清算时起，调整代理上海黄金交易所个人贵金属买卖业务延期合约保证金比例，个人客户AU（T+D）、mAU（T+D）、AU（T+N1）、AU（T+N2）、AG（T+D）等延期合约的保证金比例由40%调整至120%。其它黄金投资产品不受影响。兴业银行后续还将调整相关延期合约交易保证金比例，具体另行通知。（每日经济新闻）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871212322706690?f=rss" target="_blank" class="title">因利润腰斩，梅赛德斯-奔驰推迟9万名德国员工奖金并谋求无薪延长工时</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，据报道，由于利润大幅下滑，梅赛德斯-奔驰正被迫采取严厉的紧缩措施。公司已决定将约9万名加入工会的德国员工原定于2026年7月发放的“转型奖金”（相当于月薪的18.4%）推迟9个月至2027年4月发放，并保留在业务未见好转时完全取消该奖金的权利。此外，管理层还在公开探讨将每周工作时间从35小时延长至40小时且不支付额外加班费。梅赛德斯-奔驰今年2月公布的财报显示，2025年净利润从2024年的104亿欧元骤降至53亿欧元，降幅近50%。（界面新闻）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871211760882689?f=rss" target="_blank" class="title">主力资金大调仓，超267亿元撤出“易中天”</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，本周（6月22日—26日），A股市场震荡调整。截至6月26日收盘，上证指数、深证成指、创业板指本周分别累计下跌1.55%、1.55%、1.37%，科创50指数本周累计大涨6.32%。资金面上，本周沪深两市主力资金合计净流出2169.35亿元。主力资金大幅流出科技股，本周“易中天”（新易盛、中际旭创、天孚通信）合计被抛售超267亿元。本周主力资金净流出方面，中际旭创净流出137.80亿元，位居首位。胜宏科技净流出81.61亿元；东山精密、天孚通信、光迅科技均净流出超70亿元；华工科技净流出62.67亿元；新易盛、铜冠铜箔均净流出超50亿元；中天科技、宁德时代均净流出超35亿元。（证券</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871210982053121?f=rss" target="_blank" class="title">电影《给阿嬷的情书》总票房破19亿元</a>
+      <div class="summary"><b>📝 原文</b><p>36氪获悉，6月27日，据猫眼专业版数据，电影《给阿嬷的情书》上映59天，总票房破19亿元。</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">Hacker News</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf" target="_blank" class="title">DSpark: Speculative decoding accelerates LLM inference [pdf]</a>
+      <div class="summary"><b>📝 原文</b><p>Article URL: https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf
+Comments URL: https://news.ycombinator.com/item?id=48696585
+Points: 764
+# Comments: 326</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3871208266044420?f=rss" target="_blank" class="title">余承东：全新一代问界M9系列大定破42000台</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，华为常务董事、产品投资评审委员会主任、终端BG董事长余承东在微博发文称，全新一代问界M9系列，上市1个月大定破42000台。全国交付已开启。（证券时报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/p/3871109381035011?f=rss" target="_blank" class="title">秋声 | 大秦储能冲港股IPO：锂价50万山顶囤货血泪史，亏本三年才清完</a>
+      <div class="summary"><b>📝 原文</b><p>本文约2500字，建议阅读5分钟
+  作者&nbsp;|&nbsp;彭孝秋
+  
+   编者按：AI 大爆发之际，越来越多公司走向资本市场。每一份招股书翻动的声音里，都藏着一家公司想说与未曾明说的全部。
+   鉴于此，硬氪特推出「秋声」专栏。秋声取自欧阳修《秋声赋》，借“听秋声”之意，观产业冷暖，辨公司成色，记录企业冲刺 IPO 途中那些被写下与被隐藏的真实。这是我们第三期，大秦数字能源。
+  
+  6月26日，储能公司大秦数字能源向港交所递交了上市申请。
+  2025年，大秦数字能源收入25.25亿元，同比增长244.3%；毛利率从2024年的-19.9%反弹到23.2%；净利润由2024年</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870821042312192?f=rss" target="_blank" class="title">国家统计局：1—5月份电子行业利润同比增长103.9%</a>
+      <div class="summary"><b>📝 原文</b><p>财联社6月27日电，国家统计局工业司首席统计师于卫宁解读2026年1—5月份工业企业利润数据。于卫宁表示，电子行业支撑作用明显。1—5月份，规模以上装备制造业利润同比增长14.1%，拉动全部规模以上工业企业利润增长5.2个百分点。从行业看，全球人工智能技术变革带来高端算力芯片和存储芯片需求爆发，推动电子行业利润高速增长，1—5月份，电子行业利润增长103.9%，对全部规模以上工业企业利润增长的贡献率达43.1%，是规模以上工业企业利润较快增长的重要支撑。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870820130018562?f=rss" target="_blank" class="title">我国核聚变堆超导磁体研发取得重要突破</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，国家重大科技基础设施“聚变堆主机关键系统综合研究设施”最大的超导部件——环向场磁体完成最后制备工艺，并通过专家验收。同时，高温超导中心螺管线圈磁体也完成满工况参数测试，核心性能达到国际领先水准。环向场磁体是目前国际上体积最大的聚变堆超导磁体。该磁体长21米、宽12米、高3.3米，总重量达582吨，是当前全球尺寸最大的聚变堆超导磁体。环向场磁体是大科学装置“聚变堆主机关键系统综合研究设施”最重要的部件之一。在核聚变装置运行过程中，超导磁体产生强磁场束缚上亿摄氏度高温等离子体，其中环向场磁体负责构建环向磁场来约束等离子体，减少高能粒子对真空室器壁的冲击损耗。目前，整套磁体全链条关键环节</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870819336131848?f=rss" target="_blank" class="title">国家统计局：1—5月采矿业实现利润总额4795.2亿元，同比增长33.5%</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，据国家统计局，2026年1—5月份，采矿业实现利润总额4795.2亿元，同比增长33.5%；制造业实现利润总额23285.2亿元，增长20.0%；电力、热力、燃气及水生产和供应业实现利润总额3359.2亿元，下降2.7%。（证券时报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870818873775366?f=rss" target="_blank" class="title">国家统计局：1—5月份规模以上工业企业实现营业收入56.55万亿元，同比增长5.5%</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，据国家统计局，2026年1—5月份，规模以上工业企业实现营业收入56.55万亿元，同比增长5.5%；发生营业成本48.04万亿元，增长4.7%；营业收入利润率为5.56%，同比提高0.63个百分点。5月末，规模以上工业企业资产总计193.55万亿元，同比增长5.8%；负债合计112.69万亿元，增长6.5%；所有者权益合计80.87万亿元，增长5.0%；资产负债率为58.2%，同比上升0.3个百分点。5月末，规模以上工业企业应收账款28.17万亿元，同比增长7.7%；产成品存货7.14万亿元，增长8.8%。（证券时报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870818137969925?f=rss" target="_blank" class="title">国家统计局：1—5月份全国规模以上工业企业利润增长18.8%</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，据国家统计局，2026年1—5月份，全国规模以上工业企业实现利润总额31439.6亿元，同比增长18.8%。1—5月份，规模以上工业企业中，国有控股企业实现利润总额10486.6亿元，同比增长19.6%；股份制企业实现利润总额24348.1亿元，增长24.1%；外商及港澳台投资企业实现利润总额6957.2亿元，增长4.2%；私营企业实现利润总额7726.5亿元，增长10.7%。1—5月份，采矿业实现利润总额4795.2亿元，同比增长33.5%；制造业实现利润总额23285.2亿元，增长20.0%；电力、热力、燃气及水生产和供应业实现利润总额3359.2亿元，下降2.7%。（证券时报</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870817530909954?f=rss" target="_blank" class="title">国家统计局：1—5月份有色金属冶炼和压延加工业利润同比增长117.1%</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，据国家统计局，1—5月份，主要行业利润情况如下：有色金属冶炼和压延加工业利润同比增长117.1%，计算机、通信和其他电子设备制造业增长103.9%，化学原料和化学制品制造业增长71.6%，煤炭开采和洗选业增长33.5%，石油和天然气开采业增长17.2%，纺织业增长11.7%，通用设备制造业下降0.2%，电力、热力生产和供应业下降4.1%，专用设备制造业下降5.5%，农副食品加工业下降13.3%，电气机械和器材制造业下降13.7%，汽车制造业下降19.8%，黑色金属冶炼和压延加工业下降37.4%，非金属矿物制品业下降48.9%，石油、煤炭及其他燃料加工业由亏转盈。（证券时报）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870812987954181?f=rss" target="_blank" class="title">SpaceX将于7月7日纳入纳斯达克100指数</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日消息，太空探索技术公司（SpaceX）将于2026年7月7日纳入纳斯达克100指数。（界面新闻）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870811056821506?f=rss" target="_blank" class="title">OpenAI：开启下一代模型GPT-5.6系列的限量预览</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，OpenAI宣布已开启GPT-5.6系列的限量预览。该系列包括旗舰模型Sol、适用于日常工作的均衡模型Terra、以及快速且经济实惠的模型Luna。据介绍，Terra性能与GPT-5.5相当但价格便宜一半，Luna则以最低成本提供较强能力。OpenAI表示，计划在未来几周内全面开放GPT-5.6 Sol、Terra和Luna。在今天发布前OpenAI与美国政府沟通了模型能力及发布计划。应美方要求，此次将先向少量经审核的可信合作方进行预览。（界面新闻）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870807206663171?f=rss" target="_blank" class="title">Anthropic：获批将Mythos 5重新部署至部分美国机构</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，Anthropic发文称，自6月12日以来公司一直与美国政府紧密合作，以恢复对Claude Mythos 5和Fable 5的访问。今日收到美国政府通知，Mythos 5可重新部署至一批美国机构。公司正在继续与政府合作，扩大对Mythos 5的访问，并使Fable 5再次可供公众使用。（界面新闻）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870761159152903?f=rss" target="_blank" class="title">美联储官员卡什卡里称出现广泛通胀迹象，美联储或需加息</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，明尼阿波利斯联储行长尼尔·卡什卡里表示，通胀普遍存在的迹象促使他在美联储本月早些时候公布的经济预测中预计今年将加息一次。“我对通胀感到关切，这不仅与中东局势有关，还有经济中存在更广泛通胀压力的迹象，”卡什卡里周五在科罗拉多州阿斯彭出席Aspen Ideas Festival期间表示。通胀在2025年基本保持不变后，年初曾再次显现降温迹象，但在过去三个月却大幅上升。虽然伊朗战争推高了油价，但许多其他商品的价格也出现了上涨。这加剧了部分美联储官员的担忧，他们认为通胀压力可能更加普遍和顽固，美联储可能需要采取更有力的行动。美联储上周政策会议后公布的利率预测显示，19名决策者中有9人预计今</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/newsflashes/3870760450528512?f=rss" target="_blank" class="title">国际油价26日显著下跌</a>
+      <div class="summary"><b>📝 原文</b><p>6月27日，国际油价26日显著下跌。截至当天收盘，纽约商品交易所8月交货的轻质原油期货价格下跌2.69美元，收于每桶69.23美元，跌幅为3.74%；8月交货的伦敦布伦特原油期货价格下跌3.27美元，收于每桶71.99美元，跌幅为4.34%。（财联社）</p></div>
+      
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <span class="cat">📰 news</span>
+        <span class="source">36氪 AI</span>
+        <span class="date">2026-06-27</span>
+      </div>
+      <a href="https://36kr.com/p/3869740772316162?f=rss" target="_blank" class="title">G7易流发布货运行业首款穿戴式AI硬件「拍拍豆」，填平物流交付的“最后两米”｜最前线</a>
+      <div class="summary"><b>📝 原文</b><p>作者｜黄楠
+  编辑｜袁斯来
+  6月25日，G7易流发布货运行业首款穿戴式AI硬件“拍拍豆”。这款产品克重仅30克，采用磁吸设计，当车辆熄火停稳后，司机可直接将设备从挡风玻璃底座取下，佩戴于胸前即可自动启动录制；放回底座瞬间，录制文件将自动同步上传云端存储。
+  从“看见车上”到“看见车下”，物流AI的应用场景正在完成一次关键跨越。
+  物流行业的AI化进程加速。据中国物流与采购联合会等机构统计，2025年全球物流与供应链管理AI市场规模已超过340亿美元，预计2026年将增长至479.2亿美元，年复合增长率高达40.8%。其中在中国，AI于物流供应链领域的渗透率已超过37%
+  过去几年，</p></div>
+      
+    </div>
+<div class="footer">AI Radar · 每日自动生成 · <a href="https://github.com/ligaolan/ai-radar-news">GitHub</a></div>
+</div>
+</body>
+</html>
