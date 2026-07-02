@@ -30,9 +30,12 @@ jobs:
         run: python crawler/main.py
 
       - name: Commit updated database
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           git config user.name "ai-radar-bot"
           git config user.email "bot@ai-radar.dev"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
           git add --force prisma/dev.db
           git diff --staged --quiet
           if ($LASTEXITCODE -ne 0) { git commit -m "chore: update daily AI radar data" }
