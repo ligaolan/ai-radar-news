@@ -134,9 +134,12 @@ def upsert_articles(articles: list[dict]) -> int:
 
         try:
             conn.execute(
-                """INSERT OR IGNORE INTO Article
+                """INSERT INTO Article
                    (id, title, url, summary, aiDigest, source, sourceName, category, publishedAt, fetchedAt, createdAt)
-                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)""",
+                   VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                   ON CONFLICT(url) DO UPDATE SET
+                   aiDigest = COALESCE(excluded.aiDigest, Article.aiDigest),
+                   summary = CASE WHEN excluded.summary != '' AND Article.summary = '' THEN excluded.summary ELSE Article.summary END""",
                 (
                     safe_id,
                     a["title"],
